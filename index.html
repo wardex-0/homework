@@ -7,51 +7,47 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="form-container">
-        <h2>İletişim Formu</h2>
-        <form id="contactForm">
-            <div class="form-group">
-                <label for="name">Ad Soyad</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">E-posta</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Mesaj</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-            </div>
-            <button type="submit">Gönder</button>
-        </form>
+    <div class="tabs">
+        <div class="tab" id="formTab">Form</div>
+        <div class="tab" id="adminTab">Admin Paneli</div>
     </div>
 
-    <div class="admin-login" id="adminLogin">
-        <h2>Admin Girişi</h2>
-        <form id="adminLoginForm">
-            <div class="form-group">
-                <label for="adminPassword">Parola</label>
-                <input type="password" id="adminPassword" name="adminPassword" required>
-            </div>
-            <button type="submit">Giriş</button>
-        </form>
-    </div>
+    <div class="content">
+        <div class="form-container" id="formContent">
+            <h2>İletişim Formu</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Ad Soyad</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-posta</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mesaj</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Gönder</button>
+            </form>
+        </div>
 
-    <div class="admin-panel" id="adminPanel" style="display: none;">
-        <h2>Admin Paneli</h2>
-        <table id="submissionsTable">
-            <thead>
-                <tr>
-                    <th>Ad Soyad</th>
-                    <th>E-posta</th>
-                    <th>Mesaj</th>
-                    <th>Tarih</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Form gönderimleri burada görüntülenecek -->
-            </tbody>
-        </table>
+        <div class="admin-panel" id="adminContent" style="display: none;">
+            <h2>Admin Paneli</h2>
+            <table id="submissionsTable">
+                <thead>
+                    <tr>
+                        <th>Ad Soyad</th>
+                        <th>E-posta</th>
+                        <th>Mesaj</th>
+                        <th>Tarih</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Form gönderimleri burada görüntülenecek -->
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <script src="script.js"></script>
