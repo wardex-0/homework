@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animasyonlu Form</title>
+    <title>Animasyonlu Form ve Admin Paneli</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -25,6 +25,35 @@
             <button type="submit">Gönder</button>
         </form>
     </div>
+
+    <div class="admin-login" id="adminLogin">
+        <h2>Admin Girişi</h2>
+        <form id="adminLoginForm">
+            <div class="form-group">
+                <label for="adminPassword">Parola</label>
+                <input type="password" id="adminPassword" name="adminPassword" required>
+            </div>
+            <button type="submit">Giriş</button>
+        </form>
+    </div>
+
+    <div class="admin-panel" id="adminPanel" style="display: none;">
+        <h2>Admin Paneli</h2>
+        <table id="submissionsTable">
+            <thead>
+                <tr>
+                    <th>Ad Soyad</th>
+                    <th>E-posta</th>
+                    <th>Mesaj</th>
+                    <th>Tarih</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Form gönderimleri burada görüntülenecek -->
+            </tbody>
+        </table>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
